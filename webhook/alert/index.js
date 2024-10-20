@@ -4,7 +4,9 @@ const User = require('../user/user.model');
 const { bot } = require('../../Telegram');
 const { getTokenData } = require('../../utils')
 
-
+/**
+ * User will be able to set the alerts
+ */
 bot.onText(/\/set_alert (.+) (.+)/, async (msg, match) => {
     const chatId = msg.chat.id;
     const tokenSymbol = match[1].toLowerCase(); // e.g., "BTC"
@@ -45,7 +47,9 @@ bot.onText(/\/set_alert (.+) (.+)/, async (msg, match) => {
     bot.sendMessage(chatId, `Price alert set for ${tokenSymbol} at $${priceThreshold}.`);
 });
 
-
+/**
+ * User can see all of his alerts
+ */
 bot.onText(/\/list_alerts/, async (msg) => {
     console.log('**** list_alerts called');
     const userDetails = await User.findOne({ chatId: msg['chat']['id'] })
@@ -68,7 +72,9 @@ bot.onText(/\/list_alerts/, async (msg) => {
     }
 });
 
-
+/**
+ * User will be able to remove alerts
+ */
 bot.onText(/\/remove_alert (\w+)/, async (msg, match) => {
     let alertId = Number(match[1]) - 1; // Extract the alert ID from the command
 
