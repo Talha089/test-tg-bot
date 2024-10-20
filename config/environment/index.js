@@ -33,7 +33,7 @@ const all = {
     debug: false,
   },
 
-  project_name: 'Woofpack NFT',
+  project_name: 'Telegram Bot for Live Cryptocurrency Data',
 };
 
 /* Export the config object based on the NODE_ENV */

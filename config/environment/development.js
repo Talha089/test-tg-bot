@@ -2,7 +2,7 @@
 // Development specific configuration
 // ==================================
 module.exports = {
-  serverDomain: 'https://dserver.modernpokerclub.com',
+  serverDomain: 'https://eel-firm-buffalo.ngrok-free.a',
 
   mongo: {
     db_url: process['env']['db_url'],
