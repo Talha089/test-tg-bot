@@ -28,7 +28,7 @@ Ensure you have the following installed before proceeding:
 First, clone the repository and navigate to the project directory:
 
 ```bash
-git clone https://github.com/Talha089/project
+git clone git@github.com:Talha089/test-tg-bot.git
 ```
 
 ## **3. Backend Setup**
